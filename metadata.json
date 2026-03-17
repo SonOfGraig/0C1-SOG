@@ -1,0 +1,5 @@
+{
+  "name": "0C1-SOG Mission Control",
+  "description": "Internal mission control system for 0C1-SOG Agent powered by OpenClaw. Features sub-agent orchestration, task management, and real-time activity tracking.",
+  "requestFramePermissions": []
+}

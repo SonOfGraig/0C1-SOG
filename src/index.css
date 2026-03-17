@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #f25d0d;
+  --color-background-light: #f8f6f5;
+  --color-background-dark: #0A0A0A;
+  --color-surface: rgba(15, 15, 15, 0.70);
+  --color-border-muted: #4A4A4A;
+  --color-text-main: #E0E0E0;
+  --color-text-muted: #666666;
+  --color-secondary: #009FE3;
+  --color-critical: #FF003C;
+
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "Space Grotesk", monospace;
+}
+
+.bg-grid-pattern {
+    background-image: linear-gradient(to right, #1A1A1A 1px, transparent 1px), linear-gradient(to bottom, #1A1A1A 1px, transparent 1px);
+}
+.bg-grid-40 {
+    background-size: 40px 40px;
+}
+
+/* Custom scrollbar for tactical feel */
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+::-webkit-scrollbar-track {
+    background: rgba(10, 10, 10, 0.5);
+}
+::-webkit-scrollbar-thumb {
+    background: #4A4A4A;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #f25d0d;
+}
+
+/* Input blink effect on submit */
+.input-blink:focus {
+    animation: inputSubmitBlink 0.05s ease-out;
+}
+
+@keyframes inputSubmitBlink {
+    0% { background-color: white; color: black; }
+    100% { background-color: transparent; color: inherit; }
+}
+
+@keyframes ticker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Glass panel utility */
+.glass-panel {
+    background-color: rgba(15, 15, 15, 0.70);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid #4A4A4A;
+}
+
+/* Telemetry hover state */
+.telemetry-card:hover {
+    background-color: rgba(0, 159, 227, 0.1);
+    cursor: crosshair;
+}
